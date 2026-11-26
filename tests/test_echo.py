@@ -9,7 +9,7 @@ def test_get_postman_url_with_query_params(postman_user_name):
     response = requests.get(url_get, params=postman_user_name)
     body = response.json()
 
-    assert response.status_code == 204
+    assert response.status_code == 200
     assert body["args"] == postman_user_name
 
 
